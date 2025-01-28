@@ -1,0 +1,386 @@
+
+/*
+border: 2px solid red;
+*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0%;
+    border: 0;
+    padding: 0%;
+    font-family: poppins; 
+}
+body{    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: black;
+    flex-wrap: wrap;
+    
+    
+}
+
+header, main, figure, form{    
+    display: flex;
+    flex-direction: column;   
+    
+}
+
+header{     
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    min-width: 100px;
+    max-width: 20%;
+    max-height: 100px;
+    color: white;
+    position: relative;
+    
+}
+ul{
+    padding: 40px;
+}
+a[href^="./productos"]{
+    color: hotpink;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+    font-size:large;
+}
+
+
+/*
+save copy paste 
+just notes
+min-width: 80%; 
+max-width: 80%; 
+this was on main 
+    */
+li{
+    list-style: none; 
+}
+
+main{
+    background-color: black;
+}
+form{
+    background-color: white;
+}
+main, form{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    min-width: 80%;
+    height: auto;
+    padding-bottom: 50px;
+    
+    /*
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    */
+
+}
+
+section{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1%;
+    background-color: white;
+    color: black;
+    width: 80%;
+    min-height: 50%; 
+    max-height: auto;
+    padding-bottom: 50px;
+}
+
+h5{
+    font-size: x-large;
+    text-align: center;    
+    width: auto;
+    background-color: white;
+    padding: 5px;
+    
+    
+}
+
+
+figcaption, .caption-content{
+    display: flex;
+    flex-direction: column;
+}
+figcaption{
+    justify-content: space-around;
+}
+/*
+remove another below
+*/
+
+button, .icon-button{
+    
+    margin: 0% 10% 10% 10%;
+}
+
+
+/*
+this is the price and name of product
+*/
+p, h6{
+    margin: 5px 10%;
+    font-size: large;
+}
+/*
+label shows cantidad
+input would be the number that is entered 
+& checkmark
+*/
+input, label {    
+    font-size: large;
+    height: 30px;
+    margin: 0% 0% 10% 0%;
+}
+
+img{
+    margin: 2% 10%;
+    mask-image: linear-gradient(to top, transparent 0%, black 15%); 
+/*    filter: drop-shadow(16px 16px 20px red );*/
+    
+}
+/*
+label shows cantidad
+*/
+label{
+    background-color: white;
+    color: grey;
+}
+/*
+input would be the number that is entered 
+& checkmark
+*/
+input{
+    background-color: white;
+}
+
+/*
+agregar a carrito
+plan is to change to \
+checkmark
+*/
+
+.text-button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    color: hotpink; 
+    height: 60px; 
+    appearance: none;    
+    text-align: center;
+    cursor: pointer;
+    border: 2px solid hotpink;
+    box-shadow: 1px 1px 1px grey;
+    
+    
+}
+.text-button::before{    
+    content: "Agregar a carrito +";  
+    background-color: white;
+    color: black;     
+}
+.text-button:checked::before{    
+    content: "Agregado ✓";    
+    color: hotpink;     
+    
+}
+
+/*
+2 buttons plnas to mark 3rd
+agregar a carrito
+star button
+*may need to remove button leave other 2
+*shopping cart at the bottom of page
+*/
+.icon-button, .text-button{    
+    margin: 3% 10%;
+    font-size: large;  
+    border-radius: 10px;               
+}
+/*
+star button
+this has on click in css see below
+*/
+.icon-button{    
+    appearance: none;
+    background-color: whitesmoke;
+    border: 2px solid whitesmoke;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 1px 2px 1px grey;
+
+}
+
+.icon-button::before{    
+    content: "✰";      
+}
+/*
+Alt + 128214 
+Í
+♣
+*/
+.icon-button:checked::before{    
+    content: "⭐";
+    
+}
+/*
+this is the div that surrounds 
+label & div that has input for number
+
+row is the subtotal div container
+*/
+.row-cont, .row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin: 2% 10%;
+    
+    
+}
+/*
+row is the subtotal div container
+*/
+.row{
+    
+    background-color: white;
+    width: 80%;
+    justify-content: end;
+}
+/*
+this is the price
+this is used on the oninput js code
+*/
+data{
+    /*text-shadow: 2px 2px 0 hotpink;*/
+    font-weight: bold;
+}
+
+
+/* From Uiverse.io by Cybercom682 */ 
+
+/* Container for the number control, using flexbox for alignment */
+.number-control {
+    display: flex; /* Use flexbox layout */
+    align-items: start; /* Center items vertically */
+    height: 30px;
+}
+
+/* Style for the left control button */
+.number-left::before,
+.number-right::after {
+    content: attr(data-content); /* Set content based on the data-content attribute */
+    background-color: #333333; /* Dark background color */
+    display: flex; /* Use flexbox for centering the content */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+    border: 1px solid black; /* Add a black border */
+    width: 20px; /* Set a fixed width */
+    color: white; /* White text color */
+    transition: background-color 0.3s; /* Smooth background color transition */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    
+}
+
+/* Specific style for the left button (decrement) */
+.number-left::before {
+    height: 30px;
+    content: "-"; /* Set content to a minus sign */
+}
+
+/* Specific style for the right button (increment) */
+.number-right::after {
+    height: 30px;
+    content: "+"; /* Set content to a plus sign */
+}
+
+/* Style for the number input field */
+.number-quantity {
+     /* Add padding */
+    border: 0; /* Remove default border */
+    width: 50px; /* Set a fixed width */
+    -moz-appearance: textfield; /* Remove spinner in Firefox */
+    border-top: 1px solid black; /* Add a top border */
+    border-bottom: 1px solid black; /* Add a bottom border */
+    text-align: center;
+}
+
+/* Hover effect for the left and right buttons */
+.number-left:hover::before,
+.number-right:hover::after {
+    background-color: #666666; /* Change background color on hover */
+}
+/* Remove default number input spinners in WebKit browsers (Chrome, Safari) */
+.number-quantity::-webkit-inner-spin-button,
+.number-quantity::-webkit-outer-spin-button {
+    -webkit-appearance: none; /* Remove the default appearance */
+    
+}
+
+/* Remove default number input spinners in Firefox */
+.number-quantity {
+    -moz-appearance: textfield; /* Ensure Firefox also hides the spinners */
+}
+/*
+this is to make image bigger
+*/
+@media (min-width: 600px) {
+    img {
+        max-width: 400px; /* Increase max width on larger devices */
+    }
+}
+/*
+this is the total of the subtotal
+*/
+
+output{
+    
+    color: white;    
+    font-size: large;
+    text-align: end;    
+    width: auto;
+    background-color: white;
+    color: hotpink;
+    padding: 5px;
+    
+
+}
+
+button {
+    position: fixed;
+    bottom: 0; /* Distance from the bottom */
+    left: 0; /* Distance from the left */
+    padding: 15px;
+    background-color:hotpink;
+    color: white;
+    border: none;
+    border-radius:6px;
+    cursor: pointer;
+    z-index: 1000;    
+    font-size: large;  
+    box-shadow: 0px 2px 15px grey;
+}
+h1{
+    border: 2px solid red; 
+    color: red;
+}
+.make-row{    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+em{
+    font-style: normal; 
+    margin-left: 10px;
+}

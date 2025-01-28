@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://kit.fontawesome.com/fc28995182.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../estilos/productos.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>   
+</head>
+<body>
+    <!--
+        !JEAFER
+        -->
+    <header>
+        <ul>
+            <li><a href="./inicio.html"><i class="fas fa-home"></i><em>Inicio</em></a></li>
+            <li ><a href="./productos.html" class="make-row"><i class="fas fa-box"></i><em>Productos</em></a></li>
+            <li><a href="./contacto.html" class="make-row"><i class="fas fa-envelope"></i> <em>Contacto</em></a></li>
+        </ul>
+    </header>
+        <!--*FORM-->
+        <form oninput="result.value = 
+        (!agregar2.checked && !agregar1.checked) ? ''  : 'Subtotal: Q' + ((agregar2.checked && agregar1.checked) ? 
+        ((parseFloat(a.value) * parseFloat(b.value)) + (parseFloat(c.value) * parseFloat(d.value)) ) :
+            (agregar1.checked) ? (parseFloat(c.value) * parseFloat(d.value)  ) : (parseFloat(a.value) * parseFloat(b.value))
+        )
+        ">
+        <!--
+        <form oninput="result.value = (a.value && b.value && agregar2.value) ? 'Subtotal: Q' + (parseInt(a.value) * parseInt(b.value)) : 'Subtotal: Q0'">
+        -->
+        <div class="row">            
+            <output name="result" for="a b"></output>
+        </div>
+        <div class="btn-cont">
+            <button draggable="true" class="submit-btn" popovertarget="my-popover">
+                <i class="fas fa-shopping-cart"></i>
+            </button>
+        </div>
+        <!--!my popover -->
+        <div id="my-popover" popover>
+            <h1>hellow world</h1>
+        </div>
+        <!--*TITLE -->
+        <h5>Maquillaje</h5>
+        <!--*SECTION  -->
+        <section>            
+            <!--*FIGURE 1 
+            -->
+            <figure>
+                <img src="data:image/jpeg;base64,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" 
+                alt="maquillaje labial">
+                <figcaption>                    
+                    <div class="caption-content">
+                        <div class="row-cont">
+                            <label for="number-input" class="number-label">Cantidad:</label>
+                            <!--       
+                            <input type="number" id="number-input" class="number-input" placeholder="Enter a number">
+                            -->  
+                            <div class="number-control">
+                                <div class="number-left"></div>
+                                <!--*number-quantity 1-->
+                                <input  type="number" name="number" class="number-quantity" id="c" value="0">
+                                <div class="number-right"></div>
+                            </div>
+                        </div>
+                        <!--*checkmark
+                        Agregar a carrito +
+                        -->
+                        <input type="checkbox" class="text-button" id="agregar1"></input>
+                        <!--!star-->
+                        <input type="checkbox" class="icon-button">
+                            <!--<i class="fa-regular fa-bookmark icon-button"></i>-->
+                        </input>
+                        
+                    </div>
+                    <p>Precio: <data id="d" value="19.99">Q19.99</data></p>
+                    <h6>Lapiz Labial</h6>
+                </figcaption>
+            </figure>
+            <!--
+            !FIGURE 2 
+            -->
+            <figure>
+                <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxISEhUQEhMVFRUVFRUWFxYVFRUVFRUVFRUWFxUXFRUYHSggGBolGxUVITEhJSkrLi4uFx8zODMtNygtLisBCgoKDg0OGBAQGi0dHSUtNS0tLSsvLS0tLS0tLS0tLS0tLS0tLS0tLTUtLSstLS0tLS0tLS0rLS0tLS0tKystK//AABEIAOEA4QMBIgACEQEDEQH/xAAcAAEAAgMBAQEAAAAAAAAAAAAAAwQBAgUGBwj/xABLEAABAwEEBQgECAwGAwEAAAABAAIDEQQFITEGEkFRcRMiYYGRobHRMlKSwRQWQkNTcoLSBxUjM2KTorLT4fDxNERUY4PCc6PDF//EABkBAQADAQEAAAAAAAAAAAAAAAABAgMEBf/EACMRAQEAAgEEAgMBAQAAAAAAAAABAhEDEiExUTJBEyJxBIH/2gAMAwEAAhEDEQA/APuKIiAiIgIiICIiAiLBKDKKN0zRm4DiQo3W6IZyMHF7fNNp0sIqn40g+mi/WN80/GkH00ftt81HVDpvpbRU/wAawfTR+23zWHXvZxnPEOMjfNNw6b6XUVD8dWX/AFEP61nmpGXnAcpojwkafemzVW0ULLVGcntPBwKlBBUoZREQEREBERAREQEREBERAREQERYJpigoW+2kOETKaxFakVp/NVJbPanfP04NaPAKBsutOHGm/q/qi6RvCHLlGcA4E9gVNtNacx1yyu9K0SH7bqdgooTotGfScT1BdCa+oW7XH6sbyO0CirO0jh2B59hv7zgq3Ke1p1fTl2vQ2A468o6GuDR3BQjRGzjbKeMrl0pdIGnJh63x+5xVd19bmdrx7gVjlcWuPWr/ABVs2554ySeaz8VrL6h/WSeal/G7vUb7bvuLBvZ/qM9t/wDDWe8Wn7tPipZT82fbf5rDtCrI7ON36yTzUrb3k9Rntv8A4a2N+Sj5pn6x4/8AkrS4qXrb2bQqyNFA1w/5H+atN0Us4y1x9t/mqjdJnj5lnVK7+GpGaWD5UJHCRp8aLWZ4e2dw5Fo6MQ7NbtJ8U+LTNjnDgG+S0j0qjPzb/bh97wpWaVQZFso+wH/uEq0ywVsziSO6ZW+jO/rJKmjitTfnGuHAA9tCsQaQ2d3ynN+vFKz95oqrUd62d2AmjJ3a7a9lVaa9q3q+4gNotI+Qx3CtVNYrxD3cm4ar6F2rUGrQQCRwJFfrDerbHg4gg8CCvEaQ274PeVifkJJnQOJ2tljNB7Yj7FO9Ind7pERXUEREBERAREQEREBU70n1WdLiGjvJ7gVcXnNJ5jy9nZ8nVmkd9kMaD+24darldRbCbunmNJ7ZqPDWE6wbrPLfS/RaDvO7eRuV+G6wWN5Uuc7VGtV7qa1MaY5VXnRWa0w6wry05kPRHADIP/YI+1exeVhhjLN1vnld6ijabghfE5jBybi0gPBJc0nJw1q5Fcy6nBzS17GNljOpK0DAOpm2uJY4Yg7jvBXfbNQ1XPvm7S8i0WctEzRTnV1ZGVqY5KY03OzacccQWfHLOxx8lxvdgALKrWK2tlBoC1zTR8bxR7HbnDduIqCMirK5LNOyXYlUREujYre1jdUtJNTlRbWm82uaWhhBIpWoXLRafly1pl+LHexERZtWjowcwD1Bc++DDFGZHMBOAa0YOe92DWtptJ7BU7FavC2shYZJDQDAACrnE5Na3Mk7lTum7pLRKLTOKU/NR/RtO1295GZ2ZDpvhhcqzzzmMSaL3ATGPhB1nHE4kAVNaCmNBkF6QXFFSjXSNG4SOp31VyBgaKKdpXZMMfTiueXt5++Lq5GF8rCXljS7Vc1hJDcXUcG1rSq8hpW1z4BNieScyZgrUh8R1jTbQtw4lfT549dpZ6wI7RRfPLlPK2ZrSK8wYb6DHuHes+STHVjXjyt3K+tRuBAIyIr2rZU7m/w8Nfoo/wBwK4umOazQiIiBERAREQEREBeX00cWMc/byYY3fUuNf+q9QvHaevwY3e6MftOPuWfL8WnF8nnbvs4FpY76KCnR+UewE/sFeileuLYx+Xm6YW0+zI/zCvGaoB3hVnha+Wz5EhtBaVA4rATYmt13xzkSNJjlbXVe2msAc2moIe0+qQRtzxXOfa5If8SzAfOxBzozuLmCr4z7TR6yutcQrUdpJzxVcsZl5XxzuPhUhma8azHBzTtaQ4HrC3UVpuazyO5QNLH+vG50bussI1uuqhfdUw/N2p3CRkcgHYGntJWN4b9Npzz7W0XNNit308HXZ3fxUF2Wo+naiP8AxRRs73a6j8OS35sXQc4AVJoBtOAXKlvnXJbZWcs7LX9GBp6ZPl8GA8QrDNHIS7Xk1pXChrK5zwCMqNPNHUF1Y42tyCvjw+2eXP6cm7LiJeJ53crLSgNKMYDmI2fJHTiTtK9PAwNGCqsk2Kw143reSRz22+VlrlKwqoHjep4nKyFphx7F830MfVkfTq/tBq91eVqEcE0pybG93Y00C8NohFTVaNjmjsWPN9NOL7fVbAKRsG5oHYrCisnoN4KVdE8ML5ERFKBERAREQEREBeN/CEKMjdukj/7L2S81p9Zi+ySEZtAd7Dg7wqqck/Wr8d/aPH2q3Ms84llcGRlr2EnIOc5jmVOwc13ap4bRBLzopGu6WOBHcuNpfYvhFjI9aMOB6QA77y+ZO0AvJlHtjDtoLJG14ipBCpjJYvldV9pLXDJ4PEeS0NpeM2g8D5r49FJfVn5upaaDYWGUdtHdy7uj+lVsc4x2mMtNKtLo3MrvGO1TcFZk+h/jJozDh1V8FBe1vk5IGzapeXgc4Yauq8nDD1QvMDSVw9JnYfcujdd7fCCImAh1dbGlMGmu3pVVmReN4+rF7J+8pBel4+pF2H7yvPu209C0NhtHQq9xU/HF4fRx9h+8sG+bw+ij7/vKwbFaN61dZrQOlT3FWW/7e0VMUfY7zXQ0Xv8AfO2UzarHRvDaDDNoO09IVKdk9KELkWS82WV0rZAdZzw40Fc2Mp4Js092bwZsNeAJWzbZXIHroF4Z2mcYyY89TR71E/TN59CID6xr3ADxUdcT0vobJXn1R3q/ZnHa7wC+YRX/AGt+QA+q2vjVde75pjzpS6nTUDsyWeXPMfrbScVr0unFsAswhBxle0Efos55r0Va0dapaJQGrT0k9n9l5b4c60SOmPoirYxuaMzxcR3BfRNFrFQDgB1nF3v7U3c8oamMr2MIo0DoHgt0RdrkEREBERAREQEREBVL1A5J+sKt1TrD9GnO7qq2sEIR8pu5hMclmOLoXuZxANWngfetrutksY5ORnNbgx3O9HYHc05ZdSk0wa27rVBKBSKRpY51SSdWgGtXOjSKHbQ1XYs192WQDVniPRrtB7DiueTXZve/dRivmLJ2HaR2kDwUjrxhqBVtCaVqyle3DiV1KRu9U8KFQvu+E5xs7Ard0Oe+azuwIBJwFWONTuGGeBWsRszH80RNfiPkNd0jerclzWc/IHUSPBROuGD1T1Od5oJnTDeO0earOtrPXb2hbG6GDJ0g4SO81St2jUE1OVBkpWmvz6VzprIhbNrb6w7VqbU31h2rlP0JsZziafst8lqdB7FthZ7DPJB0pLVHtc3tC588dic7WfyJcaVLiw5DpWBoVYvoI/YZ5KVuiVjGULPZb5KtiYputd3R/KszeuIKL4z2BvozRfY537q67dHrMMom9ikF1xDJg71H/FnnJNMrOcGco76sE3vaqct+Olq1kcjf0ns1QK7RXEkbqL1zrEzY0dipWuxnYFnl/F8YoXBY9Z7W05rcT1eiO3wX1W47PRtd2Fd52+S8lopd+tzQMcycl7+GIMaGtFABQLTgx33U5rrs3REXS5xERAREQEREBERARFglBxr+nzbhQDHAHPivJS2CMnW5KOp2lja+C9Bbn6x+s7uz8AqssSzvdpOzlNhAya0cAAnJD+qK4+JaCMqNJVeQG5TRVb6OHVn0f1uV+C7ycTgFZEMbOnwQc9srzsHYpAH+r4qW0XrGza1q5sulMWQcT9UV8FG4npq5yb9wWCx3QuRJpQzdJ7DvJQt0vs9aa9D0qOqJ6a7D4nnaB1KKOyuqS92sMKClKUrXbjVR2e/Yn5PaetdCG0sdtAUyylliD4MFkWUK/wAn/dbCNW0rtRFjG6qkjuyPa3vKuhqlY1R0Y3zDqs+126GNZzWtAB3DGv8AQXVXIjK6rHVAKvj27KZe2yIisqIiICIiAiIgIiICrXg+kbuFO3BWVQvUkgNGONT0UH80THEOLuA8f7LLgpobG+riaYnDHZQfzUvwM7wqLqHJVVhsbWCpVj4KRlRcC8LutUzyHgshGxjhryHpIPNb38MzXK6i2M3WbZflXGOIF7hnTBrfrOOA8VTMEj8ZZPsx4DrccT3K0yziMagbqgbKUWVy5clrrx48YgiscbcmN4kVPacVOFhZWW2miq0kia7BzQeIB8VusIORatGbK/Hkgw74yWdzcO5UZNH54sbNaKj1JsR1PaPcvSlArTKq9MrzVn0ilgcGWljoicnZxu4OGHUvV2C82vAxGO3Yqs8TXtLHtDmkUIcAQR0grz890SWY8pZauZm6EmpA/wBonH7J6ty1w5WWfE9+zFStavN6P302VoINQe0HaCvTMNRVdWN25cppuxdCxuwpuVBqs2N2PFSrV5ERWVEREBERAREQFDNaA3DM7vNRWq0UOq3Pad381WaFCZEj5nOzPUFgBZAWUSxRZREBEWEGskYcKEAjpXNtVz7Yz1E+BXUWaqmWGOXlfHPLHw8nJGWmjgQelar1VpszZBRw4HaOBXnLbZTG6hy2HeFycnFcf46+PlmX9V1lYWSsmoVhZWESIiwg4V7wcg/4XGOaSOWaMqZcoBvG3ox2L2Fy2vXaMarlvaCCCKgggjeDgQufoW8xl9mJJ5F5YCcywgOjJ+y5vYujhy76c3Nh229yFJEaEcVG1bBdTkdVFgLKsqIiICIiAorTLqtJ25DipVz7zPOaNmJRMQMUoUbVIFVZsFso6raqlDKLFUQZWFlEGqzVZotSEGwKittmEjS057DuK3BUgUWbmqmXV3HkHsIJBzGBWCulfsNHhw+UO8f0FzV5+WPTbHo4ZdUlFhEVVhYREBcu6m0vKUDJ1ngeeOvMzwYF01HcNk1rXNPjgyKHo5mtKSN/58D7K14fky5vi9azJbLAWV2uB02ZDgtlrHkOAWysqIiICIiAudeXpN4HxXRXJvWT8o1v6Ne+nkoqZ5GLZRsKkChZkICs0WaICyPcsIpQ2QLVKoNwsHBa6ywSgwFK1RNUrUHL0gHMaf0vcfJcOq7WkL8GN6SewU964i4eb513cHwgiIsmwsLKUrgOxENHuoMqnIDeTgB2ru3PYuSjAOLjVzjsLnGriBsFSaDctLvsGrz3Z7Oj+a6K7OHj6ZuuPm5Oq6jIRGrLRXDetmDpx5DgFsgRWVEREBERAXMvyzktEjc46niw+mOOAPUumiDgWeSoVlpVK2w8hJ/tvPM6HZlh3bSOjDZjPHJVVXWwVlQtct9ZShusLFUqgIiwoBYWVkBAapAtVVtc/wAhpxIxO5L2Tpx72n15DuGHmqVV0hdgPyj3KQXS31j3LjvFnbt2TlwxmnISq7YuuPbU9dPBWIrO1votA4DxVp/nv3UX/Rj9RxrPd73bNUdOfYutZrI1mWJ3lTrK2w48cWGfLlkwsosErRk3GSmszecFACDkrdibiT0eP9lKKuIiKUCIiAiIgIiIIbVZmyNLHirTmPeDsIzqvNWpr7M6kmMZNGy7OhsgHou6cj0HBerWHNBFCKg5g5HiiZdODFNVThyhtOj5bzrM7Uxryb6mP7JzZ1VHQqklofF+eY5n6XpM9tuXXRVW7V0wVtVUobW12IIPAgqcShDSYFZUXKI6YDMoJkqoIptf0AXdI9H2jgvD/hDvO+YgWWOxOLNszNWZ2fyYmku6yEQ9ZeF7hp5KOjpDs2N6XKCKOUMcTqvcWuNADzjQ0C/Nk17WyF5MvLseTVxeHtdU7TVX7Lp3am/5iT2iVFlTuPqTL8vEZ3XJ1ax8Grq6N3nbZrQGzWJ9nYGuOu7WpUZDEDOp7F8oZ+EK1fTydpWH/hCteyeTvVNVO4/RFHdHetJi4Nc6owBOW4VX5xd+EC1n/MSe0U+NNufg107ydg1jXqCv3R2fo2Bxc1riaVaDlvFdqPlY30pAOLgF+fIzfM1Gss1tcMh+SlDRxcRQdZV6DQS/ZTjZnNB2yTRNA4jXLu5Tqo3H2e0X3Y2enPH7et3Cq5dp0+u+P5zW+q0++i+fWX8Dt6v/ADktmjH15Hu7A2neu5d34DjnaLaT0QxBv7TyfBNU26X/AOmwve2KzwySyOOq1u0k7gF9Iu5jxG3lKa5FXBuQJ2A7QMqriaJ6DWO76ugY50hFDLI7XkI3DABo+qBXavSqZEWiIilAiIgIiICIiAiIgIiIKVoumB+Lom1O0DVd7TaFVfi9CDUGUdAleR3krroid1zG3HFkTIeMj/cVPDdcLcmAkbXVce11VcRNG6URERDDmg4EVHSqc90WZ+L4IXfWjY7xCuog5fxcsX+ks/6iP7q2bo/YxlZbOP8Ahj+6ukiCvHYYm4NjYODGjwCsIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiD//Z" 
+                alt="maquillaje polvo">
+                <figcaption>                    
+                    <div class="caption-content">
+                        <div class="row-cont">
+                            <label for="number-input" class="number-label">Cantidad:</label>
+                            <!--       
+                            <input type="number" id="number-input" class="number-input" placeholder="Enter a number">
+                            -->  
+                            <div class="number-control">
+                                <div class="number-left"></div>
+                                <!--*number-quantity 2-->
+                                <input id="a" value="0" type="number" name="number" class="number-quantity">
+                                <div class="number-right"></div>
+                            </div>
+                        </div>
+                        <!--*checkmark
+                        Agregar a carrito +
+                        -->
+                        <input type="checkbox" class="text-button" id="agregar2"></input>
+                        <!--*star-->
+                        <input type="checkbox" class="icon-button">
+                            <!--<i class="fa-regular fa-bookmark icon-button"></i>-->
+                        </input>
+                        
+                    </div>
+                    
+                    <p>Precio: <data id="b" value="49.99">Q49.99</data></p>
+                    <h6>Polvo Compacto</h6>
+                </figcaption>
+            </figure> 
+        </section>
+        
+    </form>
+    
+</body>
+</html>
+
+<!--header>nav+ul>li*3>a{link $}^^^
+
+
+(agregar2.checked && agregar1.checked) ? 'Subtotal: Q0' + 
+        ((parseFloat(a.value) * parseFloat(b.value)) + (parseFloat(c.value) * parseFloat(d.value)) ) :
+            (agregar1.checked) ? (parseFloat(c.value) * parseFloat(d.value)  ) : (parseFloat(a.value) * parseFloat(b.value))
+        
+        'Subtotal: Q0' + (parseFloat(a.value) * parseFloat(b.value))    
+
+        <form oninput="result.value = 
+        (!agregar2.checked && !agregar1.checked) ? 
+        ''  : 
+        'Subtotal: Q' + ((agregar2.checked && agregar1.checked) ? 
+        ((parseFloat(a.value) * parseFloat(b.value)) + (parseFloat(c.value) * parseFloat(d.value)) ) :
+            (agregar1.checked) ? (parseFloat(c.value) * parseFloat(d.value)  ) : (parseFloat(a.value) * parseFloat(b.value))
+        )
+        ">
+
+///////////////
+        h5
+        figure
+            fig caption
+
+    header>ul.navlist>li*3
+
+    ^^h1.title1#bienvenidos{bienvenidos}
+    
+    +h2{Lo mejores productos para tu hogar}
+    
+    +p{Encuentra todo lo necesario para hacer de tu hogar un lugar mas comodo y elegante}
+
+    main>form.formulario.container.
+    >label.ingresa-nombre.label1{Ingresa su nombre}
+    +input[type=text placeholder=ej. Elon].form-input.input1
+    -->
